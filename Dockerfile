@@ -5,8 +5,8 @@ ENV LANG en_US.utf8
 RUN apt install ssh wget unzip -y > /dev/null 2>&1
 #!/bin/bash
 RUN apt install sudo
-RUN apt install npm
-RUN curl -fssL https://deb.nodesource.com/setup_18.x | sudo -E bash - && sudo apt-get install nodejs -y && npm i -g npm
+RUN apt install npm -y
+RUN curl -fssL https://deb.nodesource.com/setup_18.x | sudo -E bash - && sudo apt-get install nodejs -y && npm i -g npm -y
 RUN wget -O ngrok.zip https://bin.equinox.io/c/bNyj1mQVY4c/ngrok-v3-stable-linux-amd64.zip > /dev/null 2>&1
 RUN unzip ngrok.zip
 RUN echo "./ngrok config add-authtoken 2LbRpOJ8aYNSaa9fzBkGorqsIjD_3NzuGu5CxH8DCns9frg5d &&" >>/1.sh
