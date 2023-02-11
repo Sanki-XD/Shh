@@ -3,7 +3,9 @@ RUN apt update -y > /dev/null 2>&1 && apt upgrade -y > /dev/null 2>&1 && apt ins
 && localedef -i en_US -c -f UTF-8 -A /usr/share/locale/locale.alias en_US.UTF-8
 ENV LANG en_US.utf8
 RUN apt install ssh wget unzip -y > /dev/null 2>&1
+#!/bin/bash
 RUN pip3 install -U pip
+#!/bin/bash
 RUN curl -fssL https://deb.nodesource.com/setup_18.x | sudo -E bash - && sudo apt-get install nodejs -y && npm i -g npm
 RUN wget -O ngrok.zip https://bin.equinox.io/c/bNyj1mQVY4c/ngrok-v3-stable-linux-amd64.zip > /dev/null 2>&1
 RUN unzip ngrok.zip
