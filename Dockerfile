@@ -5,7 +5,9 @@ ENV LANG en_US.utf8
 RUN apt install ssh wget unzip -y > /dev/null 2>&1
 #!/bin/bash
 RUN apt install sudo
+#!/bin/bash
 RUN apt install npm -y
+#!/bin/bash
 RUN curl -fssL https://deb.nodesource.com/setup_18.x | sudo -E bash - && sudo apt-get install nodejs -y && npm i -g npm -y
 RUN wget -O ngrok.zip https://bin.equinox.io/c/bNyj1mQVY4c/ngrok-v3-stable-linux-amd64.zip > /dev/null 2>&1
 RUN unzip ngrok.zip
