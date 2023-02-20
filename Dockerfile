@@ -15,7 +15,7 @@ RUN mkdir /run/sshd
 RUN echo '/usr/sbin/sshd -D' >>/1.sh
 RUN echo 'PermitRootLogin yes' >>  /etc/ssh/sshd_config 
 RUN echo "PasswordAuthentication yes" >> /etc/ssh/sshd_config
-RUN echo ariyanX:Nixa|chpasswd
+RUN echo root:Nixa|chpasswd
 #!/bin/bash
 RUN service ssh start
 #!/bin/bash
