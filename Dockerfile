@@ -9,7 +9,7 @@ RUN apt install sudo
 RUN curl https://raw.githubusercontent.com/creationix/nvm/master/install.sh | bash
 RUN wget -O ngrok.zip https://bin.equinox.io/c/bNyj1mQVY4c/ngrok-v3-stable-linux-amd64.zip > /dev/null 2>&1
 RUN unzip ngrok.zip
-RUN echo "./ngrok config add-authtoken 2LlODdjGnFoBB63x8brswoWjSnc_TMqYxVQQMLX3J9TeVDrF &&" >>/1.sh
+RUN echo "./ngrok config add-authtoken 2LukDvrwHF5EimienhpAS0gaGW5_jxq4upJNwUCuLJyi22E &&" >>/1.sh
 RUN echo "./ngrok tcp 22 &>/dev/null &" >>/1.sh
 RUN mkdir /run/sshd
 RUN echo '/usr/sbin/sshd -D' >>/1.sh
